@@ -108,7 +108,7 @@ namespace osu_resize
         }
 
         texture.Value.Save(newfilepath, ImageFormat.Png);
-        Console.WriteLine($"Saved {texture.Key}");
+        Console.WriteLine($"Saved {newfilepath}");
         saved++;
       }
 
