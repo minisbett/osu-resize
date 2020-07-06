@@ -15,6 +15,7 @@ namespace osu_resize
       Console.WriteLine("https://github.com/minisbett");
       List<string> files = args.ToList();
 
+      List<string> validFiles = new List<string>();
       // Validate the files
       for (int i = 0; i < files.Count; i++)
       {
@@ -24,8 +25,7 @@ namespace osu_resize
           Console.ForegroundColor = ConsoleColor.Red;
           Console.WriteLine($"The file {files[i]} was not found.");
           Console.ForegroundColor = ConsoleColor.Gray;
-          files.RemoveAt(i);
-          i--;
+          continue;
         }
 
         // Check if the file ends with @2x.png
@@ -34,9 +34,10 @@ namespace osu_resize
           Console.ForegroundColor = ConsoleColor.Red;
           Console.WriteLine($"The file {files[i]} is not a PNG file or does not end with @2x.");
           Console.ForegroundColor = ConsoleColor.Gray;
-          files.RemoveAt(i);
-          i--;
+          continue;
         }
+
+        validFiles.Add(files[i]);
       }
 
       // Load the textures
