@@ -25,6 +25,7 @@ namespace osu_resize
           Console.WriteLine($"The file {files[i]} was not found.");
           Console.ForegroundColor = ConsoleColor.Gray;
           files.RemoveAt(i);
+          i--;
         }
 
         // Check if the file ends with @2x.png
@@ -34,6 +35,7 @@ namespace osu_resize
           Console.WriteLine($"The file {files[i]} is not a PNG file or does not end with @2x.");
           Console.ForegroundColor = ConsoleColor.Gray;
           files.RemoveAt(i);
+          i--;
         }
       }
 
