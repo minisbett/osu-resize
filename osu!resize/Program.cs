@@ -45,7 +45,7 @@ namespace osu_resize
       Console.WriteLine("Loading textures");
       Console.ForegroundColor = ConsoleColor.Gray;
       Dictionary<string, Bitmap> originalTextures = new Dictionary<string, Bitmap>();
-      foreach (string file in files)
+      foreach (string file in validFiles)
       {
         try
         {
