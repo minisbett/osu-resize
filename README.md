@@ -1,6 +1,6 @@
 # osu-resize
 An image tool that allowed osu skinners to automaically resize @2x textures to their smaller size.
-This program was requested by my girlfriend who does very much with osu! skinning.
+This program was requested by someone who does very much with osu! skinning.
 
 # How do I use it?
 
